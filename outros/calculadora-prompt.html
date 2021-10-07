@@ -1,0 +1,16 @@
+<script>
+    tentarEquacao()
+        
+    function tentarEquacao() {
+        let equacao = prompt('Digite a equação: ');
+        
+        try{
+            let resposta = eval(equacao)
+            alert(resposta)
+        }
+        catch (error) {
+            alert('Digite uma equação válida')
+            tentarEquacao()
+        } 
+    } 
+</script>
