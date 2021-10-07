@@ -10,6 +10,3 @@ def printCedulas(numero):
             print(cedulas[i], end='\n')
             div -= 1
         i -= 1
-
-
-printCedulas(273)
