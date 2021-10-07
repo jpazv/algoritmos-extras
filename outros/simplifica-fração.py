@@ -4,6 +4,3 @@ def simplifica(numerador, denominador):
         if denominador % numero == 0 and numerador % numero == 0:
             lista.append(numero)
     return numerador/max(lista), denominador/max(lista)
-
-
-print(simplifica(36, 60))
