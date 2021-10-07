@@ -10,5 +10,4 @@ def printRomano(numero):
             print(simbolo[i], end='')
             div -= 1
         i -= 1
-
-printRomano(57)
+      
