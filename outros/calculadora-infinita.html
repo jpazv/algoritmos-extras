@@ -1,0 +1,23 @@
+<script>
+    tentarEquacao()
+        
+   
+     function tentarEquacao() {
+        let equacao = prompt("Digite a equação ou digite 'sair' para sair: ");
+
+        if(equacao != 'sair'){
+            try{
+                let resposta = eval(equacao)
+                alert(resposta)
+                tentarEquacao()
+            }
+            catch (error) {
+                alert('Digite uma equação válida')
+                tentarEquacao()
+            } 
+        }
+        else{
+            alert('Você saiu da calculadora')
+        }
+    }
+</script>
