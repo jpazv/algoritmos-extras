@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Foto em família</title>
+    </head>
+    <body>
+        <script>
+            let quant_filhos = prompt('Digite a quantidade de filhos que o casal tem para poderomos\ncalcular de quantas maneiras a foto pode ser tirada.')
+            if (quant_filhos>0) {
+                let somatorio = 1;
+                for (let i = 1; i <= quant_filhos; i++) {
+                    somatorio *= i
+                }
+                document.write('A quantidade total de fotos possíveis é de: '+ 2*somatorio);
+            }
+            else {
+                document.write('A quantidade total de fotos possíveis é de: '+ 2);
+            }
+        </script>
+    </body>
+</html>
