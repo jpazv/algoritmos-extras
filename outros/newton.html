@@ -6,40 +6,23 @@
     </head>
 
     <script>
-        let blocos = prompt('Digite quantos blocos serão.')
-        let lista = []
-        let lista2 = []
-        let quant_livros = 1
+        let grupos = parseInt(prompt('Defina quantos grupos de livros serão'));
+        let lista = [grupos];
+        let numeracao = 1;
+        let result = 1;
 
-        for(let i = 1; i <= blocos; i++){
-            lista.push(i);
+        for (let i = 1; i <= grupos; i++) {
+            let livros = parseInt(prompt('Quantos livros serão no '+ numeracao+ ' grupo ?'));
+            lista.push(livros);
+            numeracao += 1;
         }
 
-        document.write(lista+ '<br>')
-        let fatorial1 = 1;
-
-        for(let i = 1; i <= lista.length; i++){
-            fatorial1 *= i;
-        }
-
-        document.write(fatorial1+ '<br>')
-
-        for(let i = 1; i <= lista.length; i++){
-            let quantidade = prompt('Digite a quantidade de livros do '+ quant_livros +'º bloco')
-            lista2.push(quantidade);
-            quant_livros += 1; 
-        }
-
-        document.write(lista2+ '<br>')
-
-        let somatorio = 1
-
-        for(let i= 0; i <= lista2.length; i++){
-            for(let a = 1; a <= lista2[i]; a++){
-                somatorio *= a
+        for (let i = 0; i <= lista.length; i++) {
+            for(let a = 1; a <= lista[i]; a++) {
+                result *= a;
             }
         }
 
-        document.write(fatorial1*somatorio + '<br>')
+        document.write('A quantidade total de formas de organizar os livros é de: ' + result);
     </script>
 </html>    
